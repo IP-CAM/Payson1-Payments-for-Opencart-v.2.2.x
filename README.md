@@ -3,8 +3,6 @@
 
 Module for OpenCart 2.2.x.x implementing Payson
 
-# Payson OpenCart Module
-
 ## Description
 
 Module for OpenCart 2.2.x implementing Payson
