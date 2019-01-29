@@ -7,7 +7,7 @@ class ControllerPaymentPaysondirect extends Controller {
     private $isInvoice;
     private $data = array();
 
-    const MODULE_VERSION = 'Aion_2.0.0.0';
+    const MODULE_VERSION = 'Aion_2.0.0.1';
 
     function __construct($registry) {
         parent::__construct($registry);
@@ -52,9 +52,9 @@ class ControllerPaymentPaysondirect extends Controller {
         $order_data = $this->model_checkout_order->getOrder($this->session->data['order_id']);
         $this->data['store_name'] = html_entity_decode($order_data['store_name'], ENT_QUOTES, 'UTF-8');
         //Payson send the responds to the shop
-        $this->data['ok_url'] = $this->url->link('payment/paysondirect/returnFromPayson');
-        $this->data['cancel_url'] = $this->url->link('checkout/checkout');
-        $this->data['ipn_url'] = $this->url->link('payment/paysondirect/paysonIpn');
+        $this->data['ok_url'] = $this->url->link('payment/paysondirect/returnFromPayson', '', true);
+        $this->data['cancel_url'] = $this->url->link('checkout/checkout', '', true);
+        $this->data['ipn_url'] = $this->url->link('payment/paysondirect/paysonIpn', '', true);
 
         $this->data['order_id'] = $order_data['order_id'];
         $this->data['amount'] = $this->currency->format($order_data['total'] * 100, $order_data['currency_code'], $order_data['currency_value'], false) / 100;
