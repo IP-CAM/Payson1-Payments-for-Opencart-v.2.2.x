@@ -1,7 +1,12 @@
 # PaysonCheckout1-Opencart-2-2
 ========================
 
+## Information
+
 Module for OpenCart 2.2.x.x implementing Payson
+
+(We support OpenCart 2.3.X - 3.X 
+Older versions can be found here)
 
 ## Description
 
